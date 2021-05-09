@@ -6,9 +6,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import utilities.Driver;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -46,5 +48,27 @@ public class Test2 {
         }
         driver.quit();
        //then quit.*/
+    }
+
+    public static class Tests {
+        @BeforeTest
+        public void setUp(){
+            Driver.get().manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+            Driver.get().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+            Driver.get().manage().window().maximize();
+        }
+
+
+        @Test
+       public void test1(){
+           Driver.get().get("https://google.com");
+       }
+
+
+       @AfterTest
+        public void tearDown(){
+            Driver.closeDriver();
+       }
+
     }
 }
