@@ -1,7 +1,7 @@
+package ClassWork;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeTest;
-import pages.pageUtils;
 import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
