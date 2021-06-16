@@ -1,6 +1,7 @@
 package utilities;
 
 
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -350,6 +351,12 @@ public class BrowserUtils {
         jse.executeScript(command);
 
     }
+
+    public static String getLastWordOfString(String str){
+        String[] arr = str.split(" ");
+        return arr[arr.length-1];
+    }
+
 
 
 }

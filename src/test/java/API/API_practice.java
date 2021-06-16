@@ -1,38 +1,55 @@
 package API;
 
+import cucumber.runtime.junit.Assertions;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
+
+import org.json.simple.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import static io.restassured.RestAssured.given;
 
 public class API_practice {
 
-    @Test
-    public void api(){
-        //Response responce = RestAssured.given().get("https://reqres.in/api/user");
-        //responce.prettyPrint();
-//        Response responce2 = RestAssured.given().get("https://reqres.in/api/users?page=2");
-//        responce2.prettyPrint();
-//        Response responce3 = RestAssured.given().get("https://reqres.in/api/user");
-//        responce3.prettyPrint();
-//        //List<String> listJson = responce3.jsonPath().getList("$");
-
-        Response responce = doGetRequest("https://reqres.in/api/user");
-        //List<String> listJson = responce.jsonPath().getList("$");
-       // System.out.println(listJson);
-        responce.prettyPrint();
-
+    @BeforeTest
+    public static void setup() {
+        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
     }
-    public static Response doGetRequest(String endpoint) {
-        RestAssured.defaultParser = Parser.JSON;
 
-        return
-                RestAssured.given().headers("Content-Type", ContentType.JSON, "Accept", ContentType.JSON).
-                        when().get(endpoint).
-                        then().contentType(ContentType.JSON).extract().response();
+    @Test
+    public void getRequestWithQueryParam() {
+        Response response = given()
+                .contentType(ContentType.JSON)
+                .param("postId", "2")
+                .when()
+                .get("/comments")
+                .then()
+                .extract().response();
+
+        Assert.assertEquals(200, response.statusCode());
+        Assert.assertEquals("Meghan_Littel@rene.us", response.jsonPath().getString("email[3]"));
+    }
+    @Test
+    public void test2() {
+
+        JSONObject request = new JSONObject();
+        request.put("name", "Beka");
+        request.put("job", "SDET");
+
+        System.out.println(request);
+
+
+        given().
+                body(request.toJSONString()).
+                when().
+                post("https://reqres.in/api/users").
+                then().statusCode(201);
+
+       Response rsp =  given().when().get("https://reqres.in/api/users/2");
+        rsp.prettyPrint();
+        System.out.println(rsp.statusCode());
     }
 }

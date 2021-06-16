@@ -1,6 +1,8 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -17,6 +19,8 @@ public class Demoqa {
 
     }
 //================================================================================================
+
+
    //click to Elements button in main page Demoqa.com
     public void clickToElements(){
         Driver.get().findElement(By.xpath("//h5[contains(text(), 'Elements')]/parent::div/parent::div/parent::div")).click();
