@@ -1,4 +1,4 @@
-@Smoke
+
 Feature: Logout functionality
 
   Scenario: User successfully log out from system
@@ -10,7 +10,7 @@ Feature: Logout functionality
     When  User clicks on LogOut Confirmation button
     Then  User should be directed to Log In page
     And   User should see message "You have been signed out"
-
+  @Beka
   Scenario: System should allow user to stay Logged In if user navigates back from Logout confirmation page
 
     Given User is on the Homepage after sign in
