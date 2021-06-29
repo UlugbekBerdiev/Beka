@@ -42,4 +42,5 @@ public class SingnUpPageTest {
         BrowserUtils.takeSnapShot(Driver.get(), "target/ScreenShots/test.png" );
 
     }
+
 }

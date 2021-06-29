@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 5,
     "elements": [
       {
-        "start_timestamp": "2021-06-11T22:41:46.011Z",
+        "start_timestamp": "2021-06-29T02:30:34.738Z",
         "before": [
           {
             "result": {
-              "duration": 24131131900,
+              "duration": 23820129300,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 4,
+        "line": 7,
         "name": "Create account",
         "description": "",
         "id": "testcase1;create-account",
         "after": [
           {
             "result": {
-              "duration": 756693000,
+              "duration": 834573100,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 8531979500,
+              "duration": 28872033800,
               "status": "passed"
             },
-            "line": 6,
+            "line": 9,
             "name": "User in create account page",
             "match": {
               "location": "SingnUpPageTest.user_in_create_account_page()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 5803871400,
+              "duration": 7922704300,
               "status": "passed"
             },
-            "line": 7,
+            "line": 10,
             "name": "User fill out all inputs",
             "match": {
               "location": "SingnUpPageTest.user_fill_out_all_inputs()"
@@ -59,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 3814853100,
+              "duration": 6612454401,
               "status": "passed"
             },
-            "line": 8,
+            "line": 11,
             "name": "User should see page with his name",
             "match": {
               "location": "SingnUpPageTest.user_should_see_page_with_his_name()"
@@ -87,7 +87,7 @@
         "name": "@regression",
         "type": "Tag",
         "location": {
-          "line": 1,
+          "line": 3,
           "column": 1
         }
       }

@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                   "html:target/default-cucumber-reports"
         },
 
-        features = "src/test/resources/TestCase1.feature",
+        features = "src/test/resources",
         glue = "stepDefinitions",
         tags = {"@regression"}
 

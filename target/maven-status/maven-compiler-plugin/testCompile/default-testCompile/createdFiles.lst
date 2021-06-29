@@ -1,0 +1,10 @@
+stepDefinitions\Hooks.class
+stepDefinitions\SingnUpPageTest.class
+pages\LoginPage.class
+pages\HomePage.class
+pages\SignUpPage.class
+utilities\Config.class
+utilities\Driver.class
+runners\CukesRunner.class
+utilities\BrowserUtils.class
+stepDefinitions\LoginTest.class
