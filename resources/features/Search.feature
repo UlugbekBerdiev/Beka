@@ -1,4 +1,4 @@
-
+  @Smoke
 Feature: RC-6 Search Functionality
  #at least 1 trade has been entered by the user. ORPR data 06/12/2021.
 
@@ -8,13 +8,13 @@ Feature: RC-6 Search Functionality
     When user enters a value "ORPR" for Symbol and actual "11112021"
     And user click Search,
     Then user should be able to filter on the listed trades.
-  @Smoke1
+
   Scenario: RC-34 Verify user see empty page after searching with invalid credential (empty inputs)
     Given User is on the Homepage after sign in
     When verify if input field symbol and date is empty
     And user click Search,
     Then user should be able to see all existing stocks
-  @Smoke1
+
   Scenario: RC-35 Verification that search functionality elements located according requirements
 
     Given User is on the Homepage after sign in
@@ -23,7 +23,7 @@ Feature: RC-6 Search Functionality
     Then Verify input date has default background text.
     Then Verify search button is Enabled.
 
-  @Smoke1
+ 
   Scenario: RC-33 Verify if user sees empty page after searching with credentials that does not exist in table
 
     Given User is on the Homepage after sign in
