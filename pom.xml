@@ -25,6 +25,11 @@
             <artifactId>cucumber-java</artifactId>
             <version>6.10.4</version>
         </dependency>
+	    <dependency>
+    <groupId>net.masterthought.jenkins</groupId>
+    <artifactId>cucumber-reports</artifactId>
+    <version>5.5.0</version>
+</dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
