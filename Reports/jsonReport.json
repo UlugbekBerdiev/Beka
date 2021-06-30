@@ -1,1 +1,268 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-06-30T01:44:56.693Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4970105000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.before()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User successfully log out from system",
+        "description": "",
+        "id": "logout-functionality;user-successfully-log-out-from-system",
+        "after": [
+          {
+            "result": {
+              "duration": 159135000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1839460000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on the Homepage after sign in",
+            "match": {
+              "location": "stepDefinitions.SearchTests.User_is_on_the_Homepage_after_sign_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1119654000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicks on LogOut button",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_clicks_on_log_out_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1006926000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be directed on LogOut confirmation page",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_should_be_directed_on_log_out_confirmation_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1023246000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should see header \"Are you sure you want to log out?\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Are you sure you want to log out?\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.Logout_Steps_Definition.user_should_see_header(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 157875000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User clicks on LogOut Confirmation button",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_clicks_on_log_out_confirmation_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1015156000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User should be directed to Log In page",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_should_be_directed_to_log_in_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34927000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User should see message \"You have been signed out\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"You have been signed out\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.Logout_Steps_Definition.user_should_see_message(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-06-30T01:45:08.128Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2194952000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.before()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "System should allow user to stay Logged In if user navigates back from Logout confirmation page",
+        "description": "",
+        "id": "logout-functionality;system-should-allow-user-to-stay-logged-in-if-user-navigates-back-from-logout-confirmation-page",
+        "after": [
+          {
+            "result": {
+              "duration": 96422000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 948658000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User is on the Homepage after sign in",
+            "match": {
+              "location": "stepDefinitions.SearchTests.User_is_on_the_Homepage_after_sign_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1064802000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User clicks on LogOut button",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_clicks_on_log_out_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1011250000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User should be directed on LogOut confirmation page",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_should_be_directed_on_log_out_confirmation_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2491220000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User click navigate back and refreshes page",
+            "match": {
+              "location": "stepDefinitions.Logout_Steps_Definition.user_click_navigate_back_and_refreshes_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2010062000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User should stay on home page.",
+            "match": {
+              "location": "stepDefinitions.Login_Steps_Definition.user_should_stay_on_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Logout functionality",
+    "description": "",
+    "id": "logout-functionality",
+    "keyword": "Feature",
+    "uri": "file:resources/features/LogOut.feature",
+    "tags": [
+      {
+        "name": "@Smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 8
+        }
+      }
+    ]
+  }
+]
