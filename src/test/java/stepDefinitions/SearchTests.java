@@ -76,4 +76,5 @@ public class SearchTests {
     public void System_should_displays_only_empty_table(){
         BrowserUtils.verifyElementNotDisplayed(HP.secondColomFirsRowFromTable);
     }
+
 }

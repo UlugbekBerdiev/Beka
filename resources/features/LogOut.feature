@@ -1,4 +1,4 @@
-@Smoke
+@Smoke @regression
 Feature: Logout functionality
 
   Scenario: User successfully log out from system
