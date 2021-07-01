@@ -1,4 +1,4 @@
-@UpdateFunction
+@Smoke
 Feature: update the existing stock trade entries
   user wants to use this template for my feature file
 
