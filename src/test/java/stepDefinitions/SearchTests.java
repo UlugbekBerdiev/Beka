@@ -21,6 +21,7 @@ public class SearchTests {
 
     @When("user enters a value {string} for Symbol and actual {string}")
     public void user_enters_a_value_orpr_for_symbol_and_actual_date(String symbol, String date) {
+       BrowserUtils.JDBCexecuteQuery("INSERT INTO records values('43452','1','2','ORPR','2021-11-11','1.23','2021-11-11','1.23','13.4')");
         HP.symbolInput.sendKeys(symbol);
         HP.dateInput.sendKeys(date);
     }
@@ -33,6 +34,7 @@ public class SearchTests {
     @Then("user should be able to filter on the listed trades.")
     public void user_should_be_able_to_filter_on_the_listed_trades() {
         Assert.assertEquals(HP.secondColomFirsRowFromTable.getText(), "ORPR");
+        BrowserUtils.JDBCexecuteQuery("DELETE FROM records WHERE id='43452'");
     }
 
     //===========================================================================================================
