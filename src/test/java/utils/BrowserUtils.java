@@ -94,5 +94,17 @@ public class BrowserUtils {
   		letsSelect = new Select(element);
   		letsSelect.selectByVisibleText(optionToSelect);
   }
+    public static void JDBCexecuteQuery(String query){
+        try{
+            String url = "jdbc:mysql://database-1.cbf9mjnqgnfr.us-east-2.rds.amazonaws.com:3306/stock_trading_tracker";
+            String userName = "admin";
+            String password = "Password123!";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, userName, password);
+            Statement statement = con.createStatement();
+            statement.execute(query);
+            System.out.println("Succes");
+        }catch(Exception e){}
+    }
 }
 
