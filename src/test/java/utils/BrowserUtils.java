@@ -107,7 +107,7 @@ public class BrowserUtils {
             Connection con = DriverManager.getConnection(url, userName, password);
             Statement statement = con.createStatement();
             statement.execute(query);
-            System.out.println("Succes");
+            System.out.println("Success");
         }catch(Exception e){}
     }
 }
