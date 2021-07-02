@@ -10,7 +10,10 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:Reports/htmlReport.html", "json:Reports/jsonReport.json"},
         features = "resources/features",
         glue = "stepDefinitions",
-        tags = "@Smoke"
+        dryRun=false,
+        tags = "@Smoke",
+        publish=true
+
 )
 public class SmokeTestRunner {
 }
