@@ -1,4 +1,4 @@
-@Smoke
+@Smoke @Regression
 Feature: Login functionality
 
     Scenario Outline: System should authorize user with VALID credentials
