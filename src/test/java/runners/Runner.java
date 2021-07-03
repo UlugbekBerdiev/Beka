@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:Reports/htmlReport.html", "json:Reports/jsonReport.json"},
         features = "resources/features",
         glue = "stepDefinitions",
-        tags = "@regression"
+        tags = "@Regression"
 )
 public class Runner {
 
