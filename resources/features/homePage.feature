@@ -1,4 +1,4 @@
-@Smoke
+@Smoke @Regression
 Feature: Stock Trade homepage components verification
 
 
