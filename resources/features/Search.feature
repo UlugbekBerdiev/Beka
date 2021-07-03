@@ -1,4 +1,4 @@
-@Smoke
+@Smoke @Regression
 Feature: RC-6 Search Functionality
  #at least 1 trade has been entered by the user. ORPR data 06/12/2021.
 
