@@ -3,16 +3,13 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        plugin = {"json:target/cucumber.json",
-                  "html:target/default-cucumber-reports"
-        },
-
-        features = "src/test/resources/features",
-        glue = "step_definitions",
-        tags = {"@regression"}
-
+@CucumberOptions(features = { "src/test/resources/features" },
+        plugin = { "pretty", "html:target/cucumber-html-reports",
+                "json:target/cucumber-html-reports/cucumber.json","rerun:target/failed_scenarios.txt" },
+        monochrome = true, glue = { "step_definitions" }, tags = {"@regression1"}
 )
+
+
 public class CukesRunner {
 
 }

@@ -3,6 +3,7 @@ package utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -356,6 +357,23 @@ public class BrowserUtils {
         String[] arr = str.split(" ");
         return arr[arr.length-1];
     }
+    public static void highlightElement(WebElement element) {
+        for (int i = 0; i <50; i++) {
+            JavascriptExecutor js = (JavascriptExecutor) Driver.get();
+            js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "color: yellow; border: 2px solid red;");
+            js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "");
+        }
+    }
+        public static void dragAndDrop(WebElement sourceElement, WebElement targetElement) {
+        Actions  action = new Actions(Driver.get());
+
+         action.dragAndDrop(sourceElement, targetElement).perform();
+        }
+
+        public static void hoverToElement(WebElement element) {
+            Actions  action = new Actions(Driver.get());
+            action.moveToElement(element).perform();
+        }
 
 
 

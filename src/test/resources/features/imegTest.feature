@@ -1,5 +1,4 @@
-
-Beka
+@regression
 
 Feature: img verify
 

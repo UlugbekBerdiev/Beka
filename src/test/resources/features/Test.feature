@@ -1,3 +1,4 @@
+@regression
 Feature: Search something
 
   Scenario: Verify search cucumber
