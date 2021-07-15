@@ -18,11 +18,11 @@ public class APItest_steps {
          response = given().accept(ContentType.JSON)
                  .get(end_point+"/"+employeeID);
          response.prettyPrint();
+Integer id =1;
 
-         Assert.assertEquals(response.statusCode(), 200);
-         Assert.assertEquals(response.path("employee_name"), "Tiger Nixon");
-
-
+         Assert.assertEquals(200,response.statusCode());
+         Assert.assertEquals("Tiger Nixon",response.path("data.employee_name"));
+         Assert.assertEquals( id,response.path("data.id"));
 
 
      }
