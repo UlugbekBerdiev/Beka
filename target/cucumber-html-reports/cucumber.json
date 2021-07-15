@@ -1,0 +1,110 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-15T15:03:29.158Z",
+        "line": 4,
+        "name": "As a user, I should not be directed to password field when I provide invalid user email",
+        "description": "",
+        "id": ";as-a-user--i-should-not-be-directed-to-password-field-when-i-provide-invalid-user-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2204400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the amazon signin page",
+            "match": {
+              "location": "AmazoneTest.i_am_on_the_amazon_signin_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1275200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter invalid user email \"jon.dow@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jon.dow@gmail.com\"",
+                  "offset": 27
+                }
+              ],
+              "location": "AmazoneTest.i_enter_invalid_user_email(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1306000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I clicked on continue button",
+            "match": {
+              "location": "AmazoneTest.i_clicked_on_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1780800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "An error message \"There was a problem\" should display",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"There was a problem\"",
+                  "offset": 17
+                }
+              ],
+              "location": "AmazoneTest.an_error_message_should_display(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1167200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The password field should not display",
+            "match": {
+              "location": "AmazoneTest.the_password_field_should_not_display()"
+            },
+            "keyword": "But "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "file:src/resources/Amazon.feature",
+    "tags": [
+      {
+        "name": "@test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
