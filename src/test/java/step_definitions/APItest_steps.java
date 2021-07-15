@@ -9,14 +9,14 @@ import org.junit.Test;
 import static io.restassured.RestAssured.*;
 
 public class APItest_steps {
-     String and_point = "http://dummy.restapiexample.com/api/v1/employee";
+     String end_point = "http://dummy.restapiexample.com/api/v1/employee";
      Response response;
    int employeeID =1;
 
      @Test
     public void apiTest(){
          response = given().accept(ContentType.JSON)
-                 .get(and_point+"/"+employeeID);
+                 .get(end_point+"/"+employeeID);
          response.prettyPrint();
 
          Assert.assertEquals(response.statusCode(), 200);
