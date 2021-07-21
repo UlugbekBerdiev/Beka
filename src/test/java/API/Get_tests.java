@@ -11,11 +11,10 @@ public class Get_tests {
 
     @Test
     public void get(){
+
        Response response= RestAssured.get("https://reqres.in/api/users/2");
 
-       Assert.assertEquals(response.statusCode(), 200);
 
-        System.out.println("StatusLine is " + response.getStatusLine());
 
     }
 }
