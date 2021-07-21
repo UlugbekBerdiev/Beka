@@ -16,9 +16,11 @@ import javax.security.auth.login.Configuration;
 public class Driver {
     private Driver(){}
 
+
     private static WebDriver driver;
 
     public static  WebDriver get(){
+
         if(driver == null){
             String browser = ConfigurationReader.get("browser"); //chrome
             System.out.println("browser = " + browser);
@@ -68,3 +70,4 @@ public class Driver {
             driver = null;
         }}
 }
+
